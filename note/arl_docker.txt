@@ -62,7 +62,8 @@ config.yaml.example
 
 修改dns
 cat /etc/resolv.conf
-sudo sed -i 's/^\(nameserver\s\).*$/\1 233.5.5.5\n\1 233.6.6.6/' /etc/resolv.conf
+sudo sed -i 's/^\(nameserver\s\).*$/\1 223.5.5.5\n\1 223.6.6.6/' /etc/resolv.conf
+
 sudo systemctl restart network
 
 添加指纹
