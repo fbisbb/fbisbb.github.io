@@ -37,7 +37,6 @@ docker-compose down
 启动 arl镜像
 docker-compose up -d
 
-
 查看docker进程
 docker ps
 
@@ -46,11 +45,20 @@ sudo systemctl restart docker
 
 Docker Compose重启命令
 docker-compose restart
+cd /root/ARL/docker
+vi config-docker.yaml
+vi/root/ARL/app/config.py
+vi/root/ARL/app/config.yaml.example
 
-
+修改配置
+docker ps
+docker exec -it 537c994f6f89 /bin/bash
+cd app
+config-docker.yaml
+config.py
+config.yaml.example
 
 添加指纹
-
 
 git clone https://github.com/loecho-sec/ARL-Finger-ADD.git
 cd ARL-Finger-ADD/
@@ -59,10 +67,10 @@ python3 ARL-Finger-ADD.py https://127.0.0.1:5003/ admin arlpass
 
 
 添加子域名字典
-
 cd /root/ARL/app/dicts/
 追加
 cat 15w.txt | tee -a domain_2w.txt
 
 检查是否追加进去
 wc -l domain_2w.txt 
+
