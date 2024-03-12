@@ -45,12 +45,14 @@ sudo systemctl restart docker
 
 Docker Compose重启命令
 docker-compose restart
+
+修改配置
+
 cd /root/ARL/docker
 vi config-docker.yaml
 vi/root/ARL/app/config.py
 vi/root/ARL/app/config.yaml.example
 
-修改配置
 docker ps
 docker exec -it 537c994f6f89 /bin/bash
 cd app
