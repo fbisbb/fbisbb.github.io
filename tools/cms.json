@@ -191,6 +191,71 @@
     "re": "",
     "md5": "07bf5a3e8fd59d6068732731d3099cd9"
   },
+    {
+    "cms": "dedecms",
+    "path": "/include/dialog/img/addnews.gif",
+    "re": "",
+    "md5": "EE11C55B7C007F527B27486B167A6110"
+  },
+    {
+    "cms": "dedecms",
+    "path": "/include/data/vdcode.jpg",
+    "re": "",
+    "md5": "FBF0F535CDA33AABBD8E2B1161F06DC1"
+  },
+    {
+    "cms": "phpcms2008",
+    "path": "/images/js/common.js",
+    "re": "",
+    "md5": "59258DCA3B30CB60F070E8AE54C2003A"
+  },
+	{
+    "cms": "pbootcms",
+    "path": "/core/template/face01.png",
+    "re": "",
+    "md5": "756E70A7C14DF79CD77024BCFE52E113"
+  },
+  {
+    "cms": "pbootcms",
+    "path": "/core/template/face02.png",
+    "re": "",
+    "md5": "B78571FC93670E5A066255A583F0A915"
+  },
+  {
+    "cms": "seacms",
+    "path": "/comment/images/a.png",
+    "re": "",
+    "md5": "3BB71630FE18359951D81262BFE690B6"
+  },
+  {
+    "cms": "seacms",
+    "path": "/include/data/vdcode.jpg",
+    "re": "",
+    "md5": "FBF0F535CDA33AABBD8E2B1161F06DC1"
+  },
+  {
+    "cms": "seacms",
+    "path": "/uploads/user/a.png",
+    "re": "",
+    "md5": "3BB71630FE18359951D81262BFE690B6"
+  },
+    {
+    "cms": "seacms",
+    "path": "/templets/default/images/img/vip.png",
+    "re": "",
+    "md5": "FD1CFA147F259131BE370B991DA87A5E"
+  },
+  {
+    "cms": "seacms",
+    "path": "/pic/faces/18.gif",
+    "re": "",
+    "md5": "045FE4FEA6EF23DD1F9A52B984A7C9E2"
+  },
+
+
+
+
+
   {
     "cms": "youdiancms",
     "path": "/Public/tpl/wx/images/c1.png",
@@ -245,9 +310,7 @@
     "path": "/widget/images/screenshot.jpg",
     "re": "",
     "md5": "22fddb5319719879b4003a2b1a3d1f86"
-  }  
-  
-  
+  }    
   
   
   
